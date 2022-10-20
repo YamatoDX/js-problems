@@ -4,7 +4,7 @@
 /**
  * if nums.length === 10, the range of numbers going to be [1,10]
  * @param {number[]} nums
- * @return {number[]}
+ * @return {number[]} the numbers that were missing in the [1,n] range, n === nums.length
  */
 var findDisappearedNumbers = function (nums) {
   for (let index = 0; index < nums.length; index++) {
