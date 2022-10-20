@@ -1,7 +1,7 @@
 // https://www.youtube.com/watch?v=Wo7dbhMEw0o&list=PLko32sysgiEPJL_t3A7UAZQIUUixV_sw2&index=5
 // https://leetcode.com/problems/intersection-of-two-arrays/
 
-var intersection1 = function (nums1, nums2) {
+const intersection1 = function (nums1, nums2) {
   return Array.from(new Set(nums1.filter((each) => nums2.includes(each))));
 };
 
@@ -11,7 +11,7 @@ var intersection1 = function (nums1, nums2) {
  * @param {number[]} nums2
  * @return {number[]}
  */
-var intersection = function (nums1, nums2) {
+const intersection = function (nums1, nums2) {
   let finalResult = [];
   let nums1_uniques = new Set(nums1);
   for (let each of nums2) {

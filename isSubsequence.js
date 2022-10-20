@@ -7,7 +7,7 @@
  * @param {string} t - long string whose subsequence we are figuring out
  * @return {boolean} - true if subsequence else false
  */
-var isSubsequence = function (s, t) {
+const isSubsequence = function (s, t) {
   // s is short string
   // t is the long string
   let [pointerOne, pointerTwo] = [0, 0];

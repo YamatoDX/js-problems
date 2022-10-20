@@ -6,7 +6,7 @@
  * @param {number[]} nums
  * @return {number[]} the numbers that were missing in the [1,n] range, n === nums.length
  */
-var _findDisappearedNumbers = function (nums) {
+const _findDisappearedNumbers = function (nums) {
   for (let index = 0; index < nums.length; index++) {
     let calculatedIndex = Math.abs(nums[index]) - 1;
     nums[calculatedIndex] = Math.abs(nums[calculatedIndex]) * -1;
@@ -20,7 +20,7 @@ var _findDisappearedNumbers = function (nums) {
   return finalResult;
 };
 
-var findDisappearedNumbers = function (nums) {
+const findDisappearedNumbers = function (nums) {
   console.log("input was", nums);
   let result = [];
   for (let index = 0; index < nums.length; index++) {

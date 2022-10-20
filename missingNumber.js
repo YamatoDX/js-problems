@@ -5,7 +5,7 @@
  * @param {number[]} nums
  * @return {number}
  */
-var missingNumber = function (nums) {
+const missingNumber = function (nums) {
   const currentSum = nums.reduce((prev, current) => prev + current, 0);
   let totalSum = nums.length;
   for (let index = 0; index < nums.length; index++) {
