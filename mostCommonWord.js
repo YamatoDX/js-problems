@@ -19,7 +19,6 @@ var mostCommonWord = function (paragraph, banned) {
     .split("")
     .map((each) => (allSymbols.includes(each) ? " " : each))
     .join("");
-  console.log("filteredString is", filteredString);
   let wordMap = {};
   filteredString.split(" ").forEach((eachWord) => {
     const corrected = eachWord.trim().toLowerCase();
