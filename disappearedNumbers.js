@@ -21,7 +21,6 @@ const _findDisappearedNumbers = function (nums) {
 };
 
 const findDisappearedNumbers = function (nums) {
-  console.log("input was", nums);
   let result = [];
   for (let index = 0; index < nums.length; index++) {
     let currentIndex = Math.abs(nums[index]) - 1;
@@ -37,6 +36,10 @@ const findDisappearedNumbers = function (nums) {
   return finalResult;
 };
 
-let testOne = [4, 3, 4, 2, 7, 8, 2, 3, 1, 11, 12];
-const result = findDisappearedNumbers(testOne);
-console.log("result is", result);
+module.exports = {
+  findDisappearedNumbers,
+};
+
+// let testOne = [4, 3, 4, 2, 7, 8, 2, 3, 1, 11, 12];
+// const result = findDisappearedNumbers(testOne);
+// console.log("result is", result);

@@ -4,9 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest --watch"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "author": "Md Shadman Matin (Piyal) <78369801+YamatoDX@users.noreply.github.com>",
+  "license": "ISC",
+  "repository": "https://github.com/YamatoDX/js-problems.git",
+  "dependencies": {
+    "jest": "^29.2.1"
+  }
 }
