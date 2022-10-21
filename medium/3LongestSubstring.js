@@ -14,7 +14,6 @@ var lengthOfLongestSubstring = function (s) {
   while (right < s.length) {
     if (!set.has(s[right])) {
       set.add(s[right]);
-      console.log("max before", max);
       max = max > set.size ? max : set.size;
       right++;
     } else {
