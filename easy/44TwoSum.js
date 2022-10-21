@@ -13,13 +13,6 @@ var twoSum = function (numbers, target) {
     if (total === target) {
       return [p1 + 1, p2 + 1];
     }
-    if (total > target) {
-      p2 -= 1;
-      continue;
-    }
-    if (total < target) {
-      p1 += 1;
-      continue;
-    }
+    total > target ? (p2 -= 1) : (p1 += 1);
   }
 };
