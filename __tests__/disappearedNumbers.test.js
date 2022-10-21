@@ -1,4 +1,4 @@
-const { findDisappearedNumbers } = require("../7disappearedNumbers");
+const { findDisappearedNumbers } = require("../easy/7disappearedNumbers");
 
 test("Testing a sample case", () => {
   let testOneInput = [4, 3, 4, 2, 7, 8, 2, 3];

@@ -3,7 +3,7 @@
 
 /**
  * @param {number} num
- * @return {boolean}
+ * @return {boolean} true if num is perfect square, else false
  */
 var isPerfectSquare = function (num) {
   if (num === 1) return true;
