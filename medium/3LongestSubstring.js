@@ -2,6 +2,7 @@
 // https://leetcode.com/problems/longest-substring-without-repeating-characters/description/
 
 /**
+ * This uses sliding window technique
  * @param {string} s
  * @return {number}
  */
