@@ -209,23 +209,23 @@ class BST {
     if (!this.root) {
       return [];
     }
-    let q = new Queue();
-    q.enqueue(this.root);
+    let s = [this.root];
     let finalResult = [];
 
-    while (q.length !== 0) {
-      let current = q.dequeue();
+    while (s.length !== 0) {
+      let current = s.pop();
       finalResult.push(current.val);
-      if (current.left) q.enqueue(current.left);
-      if (current.right) q.enqueue(current.right);
+      if (current.left) s.push(current.left);
+      if (current.right) s.push(current.right);
     }
-    return finalResult;
+    return finalResult.reverse();
   }
 }
 
 const myBST = new BST();
-const allInputs = [10, 6, 15, 3, 8, 20];
+const allInputs = [99, 11, 22, 33, 4, 55, 6, 100, 40, 75, 200];
 allInputs.forEach((eachElement) => myBST.insert(eachElement));
+console.log("input is", allInputs);
 console.log("BFS is", myBST.BFS());
 console.log("DFSPreOrder is", myBST.DFSPreOrder());
 console.log("DFSPreOrderIterative is", myBST.DFSPreOrderIterative());
