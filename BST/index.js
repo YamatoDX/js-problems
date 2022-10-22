@@ -98,7 +98,7 @@ class BST {
       if (dNode.right) {
         q.enqueue(dNode.right);
       }
-      visited.push(dNode);
+      visited.push(dNode.val);
     }
     return visited;
   }
@@ -179,3 +179,9 @@ console.log("BFS is", myBST.BFS());
 console.log("DFSPreOrder is", myBST.DFSPreOrder());
 console.log("DFSPostOrder is", myBST.DFSPostOrder());
 console.log("DFSInOrder is", myBST.DFSInOrder());
+
+module.exports = {
+  BST,
+  BSTNode,
+  Queue,
+};
