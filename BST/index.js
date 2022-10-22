@@ -190,47 +190,14 @@ const myBST = new BST();
 const allInputs = [10, 6, 15, 3, 8, 20];
 allInputs.forEach((eachElement) => myBST.insert(eachElement));
 // console.log("BFS is", myBST.BFS());
-console.log("DFSPreOrder is", myBST.DFSPreOrder());
-console.log("DFSPreOrderIterative is", myBST.DFSPreOrderIterative());
+// console.log("DFSPreOrder is", myBST.DFSPreOrder());
+// console.log("DFSPreOrderIterative is", myBST.DFSPreOrderIterative());
 // console.log("DFSPostOrder is", myBST.DFSPostOrder());
-// console.log("DFSInOrder is", myBST.DFSInOrder());
+console.log("DFSInOrder is", myBST.DFSInOrder());
+console.log("DFSInOrderIterative is", myBST.DFSInOrderIterative());
 
 module.exports = {
   BST,
   BSTNode,
   Queue,
 };
-
-function iterativePreorder(node) {
-  // Base Case
-  if (node == null) {
-    return;
-  }
-
-  // Create an empty stack and push root to it
-  var nodeStack = [];
-  nodeStack.push(root);
-
-  /* Pop all items one by one. Do following
-    for every popped item
-    a) print it
-    b) push its right child
-    c) push its left child
-    Note that right child is pushed first so
-    that left is processed first */
-  while (nodeStack.length > 0) {
-    // Pop the top item from stack and print it
-    var mynode = nodeStack[nodeStack.length - 1];
-    document.write(mynode.data + " ");
-    nodeStack.pop();
-
-    // Push right and left children of
-    // the popped node to stack
-    if (mynode.right != null) {
-      nodeStack.push(mynode.right);
-    }
-    if (mynode.left != null) {
-      nodeStack.push(mynode.left);
-    }
-  }
-}
