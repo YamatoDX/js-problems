@@ -184,15 +184,53 @@ class BST {
     }
     return visited;
   }
+
+  DFSInOrderIterative() {
+    if (!this.root) {
+      return [];
+    }
+    let s = [];
+    let finalResult = [];
+    let current = this.root;
+    while (s.length !== 0 || current) {
+      if (current) {
+        s.push(current);
+        current = current.left;
+      } else {
+        current = s.pop();
+        finalResult.push(current.val);
+        current = current.right;
+      }
+    }
+    return finalResult;
+  }
+
+  DFSPostOrderIterative() {
+    if (!this.root) {
+      return [];
+    }
+    let q = new Queue();
+    q.enqueue(this.root);
+    let finalResult = [];
+
+    while (q.length !== 0) {
+      let current = q.dequeue();
+      finalResult.push(current.val);
+      if (current.left) q.enqueue(current.left);
+      if (current.right) q.enqueue(current.right);
+    }
+    return finalResult;
+  }
 }
 
 const myBST = new BST();
 const allInputs = [10, 6, 15, 3, 8, 20];
 allInputs.forEach((eachElement) => myBST.insert(eachElement));
-// console.log("BFS is", myBST.BFS());
-// console.log("DFSPreOrder is", myBST.DFSPreOrder());
-// console.log("DFSPreOrderIterative is", myBST.DFSPreOrderIterative());
-// console.log("DFSPostOrder is", myBST.DFSPostOrder());
+console.log("BFS is", myBST.BFS());
+console.log("DFSPreOrder is", myBST.DFSPreOrder());
+console.log("DFSPreOrderIterative is", myBST.DFSPreOrderIterative());
+console.log("DFSPostOrder is", myBST.DFSPostOrder());
+console.log("DFSPostOrderIterative is", myBST.DFSPostOrderIterative());
 console.log("DFSInOrder is", myBST.DFSInOrder());
 console.log("DFSInOrderIterative is", myBST.DFSInOrderIterative());
 
