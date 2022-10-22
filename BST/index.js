@@ -220,6 +220,28 @@ class BST {
     }
     return finalResult.reverse();
   }
+
+  LevelOrderBottom() {
+    if (!this.root) {
+      return [];
+    }
+    let result = [];
+    let q = new Queue();
+    q.enqueue(this.root);
+    while (q.length !== 0) {
+      let nodeCount = q.length;
+      let rowResult = [];
+      while (nodeCount > 0) {
+        let current = q.dequeue();
+        if (current.left) q.enqueue(current.left);
+        if (current.right) q.enqueue(current.right);
+        rowResult.push(current.val);
+        nodeCount--;
+      }
+      result.unshift(rowResult);
+    }
+    return result;
+  }
 }
 
 const myBST = new BST();
@@ -233,6 +255,7 @@ console.log("DFSPostOrder is", myBST.DFSPostOrder());
 console.log("DFSPostOrderIterative is", myBST.DFSPostOrderIterative());
 console.log("DFSInOrder is", myBST.DFSInOrder());
 console.log("DFSInOrderIterative is", myBST.DFSInOrderIterative());
+console.log("LevelOrderBottom", myBST.LevelOrderBottom());
 
 module.exports = {
   BST,

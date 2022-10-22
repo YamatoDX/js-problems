@@ -28,4 +28,12 @@ test("Testing BST find, insert", () => {
   expect(myBST.DFSPostOrderIterative()).toStrictEqual([
     6, 4, 40, 75, 55, 33, 22, 11, 200, 100, 99,
   ]);
+  expect(myBST.LevelOrderBottom()).toStrictEqual([
+    [40, 75],
+    [55],
+    [6, 33],
+    [4, 22, 200],
+    [11, 100],
+    [99],
+  ]);
 });
