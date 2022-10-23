@@ -42,6 +42,7 @@ var minDepth = function (root) {
     let nodeCount = q.length;
     while (nodeCount > 0) {
       const current = q.dequeue();
+      // the logic is to return the depth when it is the first leaf node
       if (!current.left && !current.right) {
         depth++;
         return depth;
