@@ -19,12 +19,9 @@ var isSymmetric = function (root) {
   }
   function isMirror(tree1, tree2) {
     // it will handle two cases, where either of them are null or one of them is null
-    if (!tree1 || !tree2) {
-      return tree1 === tree2;
-    }
-    if (tree1.val !== tree2.val) {
-      return false;
-    }
+    if (!tree1 || !tree2) return tree1 === tree2;
+    if (tree1.val !== tree2.val) return false;
+
     return (
       isMirror(tree1.left, tree2.right) && isMirror(tree1.right, tree2.left)
     );
