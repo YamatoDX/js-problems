@@ -10,7 +10,7 @@
  * }
  */
 /**
- * @param {TreeNode} root
+ * @param {TreeNode} root - the root of the BST
  * @return {boolean}
  */
 var isSymmetric = function (root) {
