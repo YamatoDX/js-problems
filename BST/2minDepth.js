@@ -24,7 +24,7 @@ class _Queue {
     this.length += 1;
     return true;
   }
-  dequeue(val) {
+  dequeue() {
     const dElement = this.elements.pop();
     this.length -= 1;
     return dElement;
