@@ -12,4 +12,26 @@
  * @param {ListNode} head
  * @return {boolean}
  */
-var isPalindrome = function (head) {};
+
+const { reverseList } = require("./8reverseLL");
+var isPalindrome = function (head) {
+    let fast = head;
+    let slow = head;
+
+    while (fast && fast.next) {
+        fast = fast.next.next;
+        slow = slow.next;
+    }
+
+    fast = head;
+    slow = reverseList(slow);
+
+    while (slow) {
+        if (slow.val !== fast.val) {
+            return false;
+        }
+        slow = slow.next;
+        fast = fast.next;
+    }
+    return true;
+};

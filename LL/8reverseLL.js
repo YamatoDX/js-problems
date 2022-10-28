@@ -25,3 +25,7 @@ var reverseList = function (head) {
     }
     return prevNode;
 };
+
+module.exports = {
+    reverseList
+};
