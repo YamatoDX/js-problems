@@ -14,3 +14,16 @@ var majorityElement = function (nums) {
     }
     return -1;
 };
+
+const _majorityEelement = nums => {
+    const half = nums.length / 2;
+    let charMap = {};
+    for (let each of nums) {
+        !charMap[each] ? (charMap[each] = 1) : (charMap[each] += 1);
+    }
+    const allKeys = Object.keys(charMap);
+    for (let each of allKeys) {
+        if (charMap[each] > half) return each;
+    }
+    return -1;
+};
