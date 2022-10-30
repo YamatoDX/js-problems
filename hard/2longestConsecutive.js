@@ -1,6 +1,9 @@
 // https://leetcode.com/problems/longest-consecutive-sequence/
 // https://www.youtube.com/watch?v=xdMyL--dOqE&list=PLko32sysgiEOQpuBLZQCWgpNADCux_O78&index=2&ab_channel=TerribleWhiteboard
 
+// why the solution is O(n)
+//https://leetcode.com/problems/longest-consecutive-sequence/solutions/127576/official-solution/#approach-3-hashset-and-intelligent-sequence-building
+
 /**
  * @param {number[]} nums
  * @return {number}
