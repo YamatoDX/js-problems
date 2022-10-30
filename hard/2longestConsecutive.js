@@ -1,3 +1,6 @@
+// https://leetcode.com/problems/longest-consecutive-sequence/
+// https://www.youtube.com/watch?v=xdMyL--dOqE&list=PLko32sysgiEOQpuBLZQCWgpNADCux_O78&index=2&ab_channel=TerribleWhiteboard
+
 /**
  * @param {number[]} nums
  * @return {number}
