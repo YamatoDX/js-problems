@@ -13,9 +13,8 @@ let containsNearbyDuplicate = function (nums, k) {
         const current = nums[index];
         if (numsMap.has(current) && index - numsMap.get(current) <= k) {
             return true;
-        } else {
-            numsMap.set(current, index);
         }
+        numsMap.set(current, index);
     }
     return false;
 
