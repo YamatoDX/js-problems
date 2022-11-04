@@ -5,13 +5,14 @@
  * @return {number}
  */
 var countPrimes = function (n) {
-    let allNumbers = {};
-    for (let i = 2; i < n; i++) {
-        allNumbers[i] = true;
+    // just by using arrays avoided the js head memory problem
+    let allNumbers = [];
+    for (let i = 0; i < n; i++) {
+        allNumbers.push(true);
     }
 
     for (let i = 2; i * i < n; i++) {
-        if (allNumbers[i] === true) {
+        if (allNumbers[i]) {
             for (let j = i; j * i < n; j++) {
                 allNumbers[j * i] = false;
             }
@@ -19,9 +20,9 @@ var countPrimes = function (n) {
     }
 
     let primeCount = 0;
-    Object.keys(allNumbers).forEach(each => {
-        if (allNumbers[each] === true) primeCount += 1;
-    });
+    for (let i = 2; i < n; i++) {
+        if (allNumbers[i]) primeCount += 1;
+    }
     return primeCount;
 };
 
