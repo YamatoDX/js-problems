@@ -1,5 +1,5 @@
 // https://www.youtube.com/watch?v=gnwFjlUXN1o&list=PLko32sysgiEPJL_t3A7UAZQIUUixV_sw2&index=60&ab_channel=TerribleWhiteboard
-// https://leetcode.com/problems/palindrome-number/submissions/836551223/
+// https://leetcode.com/problems/palindrome-number/
 
 /** This solution is by converting the number to a string
  * @param {number} x
@@ -16,4 +16,16 @@ var _isPalindrome = function (x) {
         right--;
     }
     return true;
+};
+
+// this solution doesn't use string methods
+const isPalindrome = x => {
+    if (x < 0) return false;
+    let reversed = 0;
+    let current = x;
+    while (current > 0) {
+        reversed = reversed * 10 + (current % 10);
+        current = Math.floor(current / 10);
+    }
+    return reversed === x;
 };
