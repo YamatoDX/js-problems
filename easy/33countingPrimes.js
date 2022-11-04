@@ -25,6 +25,3 @@ var countPrimes = function (n) {
     }
     return primeCount;
 };
-
-const result = countPrimes(10000);
-console.log("result is", result);
