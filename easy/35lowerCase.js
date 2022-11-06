@@ -8,11 +8,8 @@ var toLowerCase = function (s) {
     let finalResult = "";
     for (let each of s) {
         const code = each.charCodeAt(0);
-        let newCharacter = each;
-        if (code >= 65 && code <= 90) {
-            // its a cap letter
-            newCharacter = String.fromCharCode(code + 32);
-        }
+        let newCharacter =
+            code >= 65 && code <= 90 ? String.fromCharCode(code + 32) : each;
         finalResult += newCharacter;
     }
     return finalResult;
