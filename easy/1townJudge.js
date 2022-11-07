@@ -10,6 +10,7 @@
  * @return {number}
  */
 var findJudge = function (n, trust) {
+    // Using graph adjacency list here
     let adList = {};
     for (let i = 1; i <= n; i++) {
         adList[i.toString()] = [];
