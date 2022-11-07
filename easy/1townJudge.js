@@ -1,9 +1,6 @@
 // https://www.youtube.com/watch?v=ab-TB2_gsac&list=PLko32sysgiEPJL_t3A7UAZQIUUixV_sw2&ab_channel=TerribleWhiteboard
 // https://leetcode.com/problems/find-the-town-judge/
 
-// https://www.youtube.com/watch?v=ab-TB2_gsac&list=PLko32sysgiEPJL_t3A7UAZQIUUixV_sw2&ab_channel=TerribleWhiteboard
-// https://leetcode.com/problems/find-the-town-judge/
-
 /**
  * @param {number} n
  * @param {number[][]} trust
