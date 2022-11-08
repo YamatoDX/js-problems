@@ -1,5 +1,5 @@
 // https://www.youtube.com/watch?v=oFZLJ5Y5E48&list=PLko32sysgiEPJL_t3A7UAZQIUUixV_sw2&index=20&ab_channel=TerribleWhiteboard
-// https://leetcode.com/problems/find-the-difference/submissions/839059002/
+// https://leetcode.com/problems/find-the-difference/
 
 /**
  * @param {string} s
