@@ -17,3 +17,7 @@ var twoSum = function (nums, target) {
     }
     return [];
 };
+
+const _twoSum = () => {
+    return undefined;
+};
