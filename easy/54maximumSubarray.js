@@ -4,11 +4,26 @@
  * @param {number[]} nums
  * @return {number}
  */
-var maxSubArray = function (nums) {
+var _maxSubArray = function (nums) {
     let current = nums[0];
     let global = nums[0];
 
     for (let each of nums.slice(1)) {
+        current = Math.max(each, current + each);
+        if (current > global) {
+            global = current;
+        }
+    }
+    return global;
+};
+
+// below is faster
+
+var maxSubArray = function (nums) {
+    let current = nums[0];
+    let global = nums[0];
+
+    for (let i = 1; i < nums.length; i++) {
         current = Math.max(each, current + each);
         if (current > global) {
             global = current;
